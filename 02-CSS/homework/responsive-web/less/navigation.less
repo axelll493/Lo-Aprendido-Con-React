@@ -1,0 +1,37 @@
+// Código de Nav acá
+.header {
+    background-color: @nav-bg; //le aplique el color gris al nav
+    margin: 16px 0;
+    box-shadow: inset 0 -4px 2px -2px @sea-shell; 
+}
+.title__h1 {
+    text-align: center;
+}
+
+.nav__bar {
+    //colum en columna
+    //display: flex; //va a poner los elementos uno al lado del otro row
+    //flex-direction: row row-reverse; da vuelta la lista
+    //flex-direction: row; //comportamiento por defecto
+    //justify-content: center; //lo centra
+    .flex-center();
+    margin-top: 16px; //un espacio arriba
+}
+
+.nav__link {
+    text-decoration: none; // para sacarle el subrrayado
+    color: @header-font-color; //le aplica un color al texto
+    font-size: 18px; //tamaño de letra
+    font-weight: bold; //grosor de la letra
+    & + .nav__link { //si tenes otro nav__link a tu derecha sumale este estilo
+        margin-left: 16px;//separar las letras
+    }
+}
+@media @phone {
+    .nav__link {
+        font-size: 10px;
+    }
+    .tecnologia, .ondas {
+        display: none;
+    }
+}

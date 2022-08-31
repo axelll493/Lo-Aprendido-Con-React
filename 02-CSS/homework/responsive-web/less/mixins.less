@@ -1,0 +1,29 @@
+// Mixins acá
+.flex-center() {
+     //colum en columna
+     display: flex; //va a poner los elementos uno al lado del otro row
+     //flex-direction: row row-reverse; da vuelta la lista
+     flex-direction: row; //comportamiento por defecto
+     justify-content: center; //lo centra
+}
+
+.radius() {
+    border-radius: 16px;
+}
+
+
+.btn__registrarse(@bg, @size) {
+    front-size: @size;
+    background-color: @bg;
+    width: fit-content;
+    padding: 13px;
+    color: @porcelain;
+    border-radius: 8px;
+    cursor: pointer; //para la manito
+    transition: background-color 0.25s, box-shadow 0.3s;
+    &:hover {
+        background-color: lighten(@bg, 45%);
+        box-shadow: 2px 2px 4px #aaa;
+    }
+}
+
